@@ -6,4 +6,10 @@ Apellido {{alumno.apellido}} <br>
 Edad {{alumno.edad}} <br>
 
 
-<button class="btn btn-primary" (click)="tocarCambio()">CAMBIO</button>
+<button [class]="estiloBoton()" (click)="tocarCambio()">CAMBIO</button>
+
+
+<div class="form-group">
+    <label for="nombre">Nuevo Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="alumno.nombre" class="form-control" id="nombre">
+</div>
