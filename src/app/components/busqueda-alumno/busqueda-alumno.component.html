@@ -1,1 +1,11 @@
-<p>busqueda-alumno works!</p>
+<p>BÚSQUEDA DE ALUMNO POR ID</p>
+
+
+
+
+<div class="form-group">
+    <label for="nombre">Id buscado</label>
+    <input type="number" name="idalumno" [(ngModel)]="idbusqueda" class="form-control" placeholder="Intro el id del alumno a buscar">
+</div>
+<br>
+<button class="btn btn-primary" (click)="buscarAlumnoPorId()">BUSCAR</button>
