@@ -12,13 +12,14 @@ import { Alumno } from '../../model/alumno';
 export class BusquedaAlumnoComponent {
 
   idbusqueda!:number;
+  alumno:Alumno;
 
   //a partir del Angular 15
  // alumnoServiceNuevo:AlumnoService = inject(AlumnoService)
 
   constructor(private alumnoService:AlumnoService)
  {
-
+  this.alumno = new Alumno()
  } 
 
   buscarAlumnoPorId()
@@ -35,6 +36,7 @@ export class BusquedaAlumnoComponent {
     } ,
     next: (alumnoRx:Alumno) =>{
       console.log("Alumno recibido bien " + alumnoRx.nombre + " " + alumnoRx.id);
+      this.alumno = alumnoRx;
     } 
 
    } 
