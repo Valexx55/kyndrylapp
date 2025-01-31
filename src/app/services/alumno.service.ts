@@ -19,4 +19,11 @@ export class AlumnoService {
     //return this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id);
     return this.httpClient.get<Alumno>("http://localhost:33333/alumno/"+id);
  } 
+
+
+ listadoAlumnos():Observable<Array<Alumno>>
+ {
+    //return this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id);
+    return this.httpClient.get<Array<Alumno>>("http://localhost:33333/alumno");
+ } 
 }
