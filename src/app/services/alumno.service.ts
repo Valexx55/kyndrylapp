@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Alumno } from '../model/alumno';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class AlumnoService {
   }
 
 
-  buscarAlumnosPorId(id:number)
+  buscarAlumnosPorId(id:number):Observable<Alumno>
  {
-    this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id)
+    return this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id);
  } 
 }
