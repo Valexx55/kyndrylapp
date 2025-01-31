@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AlumnoService } from '../../services/alumno.service';
 import { Alumno } from '../../model/alumno';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-busqueda-alumno',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './busqueda-alumno.component.html',
   styleUrl: './busqueda-alumno.component.css'
 })

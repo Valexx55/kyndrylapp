@@ -10,10 +10,22 @@
 <br>
 <button class="btn btn-primary" (click)="buscarAlumnoPorId()">BUSCAR</button>
 
-<div class="container">
-    ALUMNO <br>
+<div class="container" *ngIf="alumno.id!=0">
+    ALUMNO ngIf  <br>
     ID {{alumno.id}} <br>
     Nombre {{alumno.nombre}} <br>
     Apellido {{alumno.apellido}} <br>
     Edad {{alumno.edad}} <br>
 </div>
+<!-- 
+@if (alumno.id!=0){
+    <div class="container">
+        ALUMNO if nuevo <br>
+        ID {{alumno.id}} <br>
+        Nombre {{alumno.nombre}} <br>
+        Apellido {{alumno.apellido}} <br>
+        Edad {{alumno.edad}} <br>
+    </div>
+}
+-->
+

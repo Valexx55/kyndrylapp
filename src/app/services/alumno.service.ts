@@ -16,6 +16,7 @@ export class AlumnoService {
 
   buscarAlumnosPorId(id:number):Observable<Alumno>
  {
-    return this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id);
+    //return this.httpClient.get<Alumno>("http://localhost:9090/api/alumnos/"+id);
+    return this.httpClient.get<Alumno>("http://localhost:33333/alumno/"+id);
  } 
 }
